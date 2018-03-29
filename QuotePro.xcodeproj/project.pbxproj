@@ -12,6 +12,12 @@
 		897A7D96206C340E007F596C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897A7D94206C340E007F596C /* Main.storyboard */; };
 		897A7D98206C340E007F596C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 897A7D97206C340E007F596C /* Assets.xcassets */; };
 		897A7D9B206C340E007F596C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 897A7D99206C340E007F596C /* LaunchScreen.storyboard */; };
+		897A7DA3206C361E007F596C /* QuoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897A7DA2206C361E007F596C /* QuoteManager.swift */; };
+		897A7DA5206C4123007F596C /* QuoteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897A7DA4206C4123007F596C /* QuoteObject.swift */; };
+		897A7DA7206C7551007F596C /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897A7DA6206C7551007F596C /* PhotoManager.swift */; };
+		897A7DA9206C7573007F596C /* PhotoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897A7DA8206C7573007F596C /* PhotoObject.swift */; };
+		897A7DAB206C8AD4007F596C /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897A7DAA206C8AD4007F596C /* QuoteView.swift */; };
+		897A7DAD206C8AF5007F596C /* QuoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 897A7DAC206C8AF5007F596C /* QuoteView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		897A7D97206C340E007F596C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		897A7D9A206C340E007F596C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		897A7D9C206C340E007F596C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		897A7DA2206C361E007F596C /* QuoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteManager.swift; sourceTree = "<group>"; };
+		897A7DA4206C4123007F596C /* QuoteObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteObject.swift; sourceTree = "<group>"; };
+		897A7DA6206C7551007F596C /* PhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
+		897A7DA8206C7573007F596C /* PhotoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoObject.swift; sourceTree = "<group>"; };
+		897A7DAA206C8AD4007F596C /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
+		897A7DAC206C8AF5007F596C /* QuoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,12 @@
 				897A7D97206C340E007F596C /* Assets.xcassets */,
 				897A7D99206C340E007F596C /* LaunchScreen.storyboard */,
 				897A7D9C206C340E007F596C /* Info.plist */,
+				897A7DA2206C361E007F596C /* QuoteManager.swift */,
+				897A7DA4206C4123007F596C /* QuoteObject.swift */,
+				897A7DA6206C7551007F596C /* PhotoManager.swift */,
+				897A7DA8206C7573007F596C /* PhotoObject.swift */,
+				897A7DAA206C8AD4007F596C /* QuoteView.swift */,
+				897A7DAC206C8AF5007F596C /* QuoteView.xib */,
 			);
 			path = QuotePro;
 			sourceTree = "<group>";
@@ -123,6 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				897A7DAD206C8AF5007F596C /* QuoteView.xib in Resources */,
 				897A7D9B206C340E007F596C /* LaunchScreen.storyboard in Resources */,
 				897A7D98206C340E007F596C /* Assets.xcassets in Resources */,
 				897A7D96206C340E007F596C /* Main.storyboard in Resources */,
@@ -137,7 +156,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				897A7D93206C340E007F596C /* ViewController.swift in Sources */,
+				897A7DA5206C4123007F596C /* QuoteObject.swift in Sources */,
 				897A7D91206C340E007F596C /* AppDelegate.swift in Sources */,
+				897A7DA7206C7551007F596C /* PhotoManager.swift in Sources */,
+				897A7DAB206C8AD4007F596C /* QuoteView.swift in Sources */,
+				897A7DA3206C361E007F596C /* QuoteManager.swift in Sources */,
+				897A7DA9206C7573007F596C /* PhotoObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
