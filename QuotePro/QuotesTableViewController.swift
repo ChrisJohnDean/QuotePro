@@ -57,6 +57,7 @@ class QuotesTableViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func shareQuoteImage(quoteObject: QuoteObject) {
+        /*
         let quoteView = QuoteView()
         quoteView.setUpWithQuote(quoteObject: quoteObject)
         UIGraphicsBeginImageContext(quoteView.frame.size)
@@ -67,6 +68,27 @@ class QuotesTableViewController: UIViewController, UITableViewDelegate, UITableV
         let activityViewController = UIActivityViewController(activityItems: [quoteImage!], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController, animated: true, completion: nil)
+        */
+        
+        
+        
+      //  DispatchQueue.main.async {
+            let quoteView = Bundle.main.loadNibNamed("QuoteView", owner: nil, options: nil)?.first! as! QuoteView
+
+            quoteView.setUpWithQuote(quoteObject: quoteObject)
+            UIGraphicsBeginImageContextWithOptions(quoteView.bounds.size, quoteView.isOpaque, quoteView.contentScaleFactor)
+            quoteView.layer.render(in: UIGraphicsGetCurrentContext()!)
+            quoteView.drawHierarchy(in: quoteView.bounds, afterScreenUpdates: true)
+            
+            let quoteImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            //let pngData = UIImagePNGRepresentation(quoteImage!)
+            //let finalImage = UIImage(data: pngData!)
+            let activityViewController = UIActivityViewController(activityItems: [quoteImage!], applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController, animated: true, completion: nil)
+       // }
+ 
     }
     
 }

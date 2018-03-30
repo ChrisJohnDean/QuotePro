@@ -86,7 +86,9 @@ class ViewController: UIViewController {
         quoteManager?.forismaticNetworkRequest() {(quoteObject: QuoteObject) in
             self.quoteObject = quoteObject
             self.quoteObject?.photoObject = self.photoObject
-            self.quoteView.setUpWithQuote(quoteObject: self.quoteObject!)
+            DispatchQueue.main.async {
+                self.quoteView.setUpWithQuote(quoteObject: self.quoteObject!)
+            }
         }
     }
     
@@ -94,7 +96,10 @@ class ViewController: UIViewController {
         photoManager?.lorempixelNetworkRequest() {(image: UIImage) in
             self.photoObject = PhotoObject(photo: image)
             self.quoteObject?.photoObject = self.photoObject
-            self.quoteView.setUpWithQuote(quoteObject: self.quoteObject!)
+            DispatchQueue.main.async {
+                self.quoteView.setUpWithQuote(quoteObject: self.quoteObject!)
+            }
+            
         }
     }
     

@@ -24,11 +24,12 @@ class QuoteView: UIView {
     }
     
     func setUpWithQuote(quoteObject: QuoteObject) {
-        DispatchQueue.main.async {
+       // DispatchQueue.main.async {
             self.backgroundImage.image = quoteObject.photoObject?.photo
             self.quoteText.text = "\"\(quoteObject.quote)\""
             self.authorName.text = "- " + quoteObject.author
-        }
+            self.layoutIfNeeded()
+        //}
     }
     
     
