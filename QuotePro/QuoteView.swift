@@ -14,10 +14,21 @@ class QuoteView: UIView {
     @IBOutlet weak var quoteText: UILabel!
     @IBOutlet weak var authorName: UILabel!
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     func setUpWithQuote(quoteObject: QuoteObject) {
-        backgroundImage.image = quoteObject.photoObject?.photo
-        quoteText.text = quoteObject.quote
-        authorName.text = quoteObject.author
+        DispatchQueue.main.async {
+            self.backgroundImage.image = quoteObject.photoObject?.photo
+            self.quoteText.text = "\"\(quoteObject.quote)\""
+            self.authorName.text = "- " + quoteObject.author
+        }
     }
     
     

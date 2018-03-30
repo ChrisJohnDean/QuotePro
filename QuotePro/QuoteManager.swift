@@ -15,7 +15,7 @@ class QuoteManager {
         var quoteObject: QuoteObject!
         
         
-        guard let url = URL(string: "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json") else {return}
+        guard let url = URL(string: "https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json") else {return}
         let request = NSURLRequest(url: url)
         let dataTask = URLSession.shared.dataTask(with: request as URLRequest) { (data: Data?, response: URLResponse?, error: Error?) in
             
@@ -30,10 +30,10 @@ class QuoteManager {
             }
             
             quoteObject = self.parseJsonData(data: data)
-            
+            completionHandler(quoteObject)
         }
         dataTask.resume()
-        completionHandler(quoteObject)
+        
     }
  
     func parseJsonData(data: Data) -> QuoteObject {

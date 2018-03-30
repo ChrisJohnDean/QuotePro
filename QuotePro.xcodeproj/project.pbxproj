@@ -18,6 +18,7 @@
 		897A7DA9206C7573007F596C /* PhotoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897A7DA8206C7573007F596C /* PhotoObject.swift */; };
 		897A7DAB206C8AD4007F596C /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897A7DAA206C8AD4007F596C /* QuoteView.swift */; };
 		897A7DAD206C8AF5007F596C /* QuoteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 897A7DAC206C8AF5007F596C /* QuoteView.xib */; };
+		897A7DAF206D9CC7007F596C /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897A7DAE206D9CC7007F596C /* QuotesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		897A7DA8206C7573007F596C /* PhotoObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoObject.swift; sourceTree = "<group>"; };
 		897A7DAA206C8AD4007F596C /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 		897A7DAC206C8AF5007F596C /* QuoteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteView.xib; sourceTree = "<group>"; };
+		897A7DAE206D9CC7007F596C /* QuotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				897A7DA8206C7573007F596C /* PhotoObject.swift */,
 				897A7DAA206C8AD4007F596C /* QuoteView.swift */,
 				897A7DAC206C8AF5007F596C /* QuoteView.xib */,
+				897A7DAE206D9CC7007F596C /* QuotesTableViewController.swift */,
 			);
 			path = QuotePro;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			files = (
 				897A7D93206C340E007F596C /* ViewController.swift in Sources */,
 				897A7DA5206C4123007F596C /* QuoteObject.swift in Sources */,
+				897A7DAF206D9CC7007F596C /* QuotesTableViewController.swift in Sources */,
 				897A7D91206C340E007F596C /* AppDelegate.swift in Sources */,
 				897A7DA7206C7551007F596C /* PhotoManager.swift in Sources */,
 				897A7DAB206C8AD4007F596C /* QuoteView.swift in Sources */,
