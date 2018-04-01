@@ -43,6 +43,7 @@ class ViewController: UIViewController {
         button.layer.shadowOffset = CGSize(width: 2.5, height: 2.5)
         button.layer.shadowRadius = 5
         button.layer.shadowOpacity = 1.0
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -83,6 +84,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func newQuote(_ sender: Any) {
+        
+        makeSpringyButton(button: self.newQuoteOutlet)
+        
         quoteManager?.forismaticNetworkRequest() {(quoteObject: QuoteObject) in
             self.quoteObject = quoteObject
             self.quoteObject?.photoObject = self.photoObject
@@ -93,6 +97,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func newPhoto(_ sender: Any) {
+        
+        makeSpringyButton(button: self.newPhotoOulet)
+        
         photoManager?.lorempixelNetworkRequest() {(image: UIImage) in
             self.photoObject = PhotoObject(photo: image)
             self.quoteObject?.photoObject = self.photoObject
@@ -104,10 +111,32 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveQuoteView(_ sender: Any) {
+        
+        makeSpringyButton(button: self.saveOutlet)
         guard let quoteObject = self.quoteObject else {return}
         delegate?.addQuote(quoteObject: quoteObject)
     }
     
-
+    func makeSpringyButton(button: UIButton) {
+        
+        button.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+        UIView.animate(withDuration: 1.5,
+                       delay: 0,
+                       usingSpringWithDamping: CGFloat(1),
+                       initialSpringVelocity: CGFloat(0.5),
+                       options: .curveEaseInOut,
+                       //options: .allowUserInteraction, //UIViewAnimationOptions.allowUserInteraction, UIViewAnimationOptions.curveEaseInOut,
+            animations: {
+                button.transform = CGAffineTransform.identity
+        },
+            completion: { Void in()  }
+        )
+    }
+    
 }
+
+
+
+
+
 
